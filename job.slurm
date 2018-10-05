@@ -61,6 +61,7 @@ groupsize=$(( node_proc * group_num_nodes ))
 madam="madam.par"
 fpfile="fpfg2018_61.pkl"
 outdir="out/fg2018_61pix_20d"
+mkdir -p $outdir
 
 # The commandline
 
