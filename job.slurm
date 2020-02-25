@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#SBATCH --partition=debug
+#SBATCH --partition=regular
 
 #SBATCH --account=mp107
-#SBATCH --nodes=10
-#SBATCH --time=00:30:00
+#SBATCH --nodes=730
+#SBATCH --time=04:30:00
 #SBATCH --job-name=fg2018
 #SBATCH --output=out_tiny_satellite_edison_%j.log
 #SBATCH --mail-type=ALL
@@ -53,14 +53,14 @@ parfile="scanning.par"
 
 # Observations
 
-nobs=20
+nobs=365
 
-group_num_nodes=1
+group_num_nodes=7
 groupsize=$(( node_proc * group_num_nodes ))
 
 madam="madam.par"
 fpfile="fpfg2018_61.pkl"
-outdir="out/fg2018_61pix_20d"
+outdir="out/fg2018_61pix_1y_80Hz"
 mkdir -p $outdir
 
 # The commandline
